@@ -1,0 +1,115 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url("../../Fonts/edunline.ttf"); }
+
+.WLTS-Software {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Roboto', sans-serif; }
+  .WLTS-Software .main-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .WLTS-Software .main-content .header-container {
+      width: 100%;
+      height: 200px;
+      justify-content: center;
+      display: flex;
+      flex-direction: column; }
+      .WLTS-Software .main-content .header-container .header {
+        color: #E4D131;
+        font-weight: 900;
+        font-size: 100px;
+        text-shadow: -3px 0 #080D51, 0 3px #080D51, 3px 0 #080D51, 0 -3px #080D51;
+        margin: 10px auto;
+        font-family: "MyFont";
+        line-height: 70px; }
+    .WLTS-Software .main-content .route-content {
+      height: 100%;
+      margin: 10px;
+      padding: 25px;
+      border-radius: 2px;
+      max-width: 1200px;
+      min-width: 500px;
+      align-self: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column; }
+      .WLTS-Software .main-content .route-content h2 {
+        text-align: center; }
+      .WLTS-Software .main-content .route-content .home .add-container {
+        margin-top: 25px;
+        padding: 10px;
+        font-size: 25px;
+        display: flex;
+        flex-direction: column;
+        color: #E4D131; }
+        .WLTS-Software .main-content .route-content .home .add-container .paragraph {
+          margin: 15px auto;
+          max-width: 700px;
+          line-height: 50px;
+          text-shadow: -3px 0 #080D51, 0 3px #080D51, 3px 0 #080D51, 0 -3px #080D51; }
+          .WLTS-Software .main-content .route-content .home .add-container .paragraph.important {
+            font-weight: bold; }
+        .WLTS-Software .main-content .route-content .home .add-container .to-do {
+          padding: 25px;
+          box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.8);
+          background: rgba(255, 255, 255, 0.9);
+          color: black;
+          display: flex;
+          flex-direction: column; }
+          .WLTS-Software .main-content .route-content .home .add-container .to-do .header {
+            margin: 15px 0; }
+          .WLTS-Software .main-content .route-content .home .add-container .to-do .list-item {
+            font-size: 18px;
+            padding: 10px 0; }
+          .WLTS-Software .main-content .route-content .home .add-container .to-do .fas {
+            color: black;
+            margin: 0 15px;
+            font-size: 15px; }
+    .WLTS-Software .main-content .route-content::after {
+      content: "";
+      background-color: #1D2586;
+      opacity: 0.65;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1; }
+  .WLTS-Software h1, .WLTS-Software h2 {
+    color: #10176E; }
+
+.fas {
+  color: white; }
+
+.sidebar-container {
+  height: 100%;
+  min-width: 200px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3); }
+  .sidebar-container .fas {
+    color: #10176E; }
+  .sidebar-container .links-container {
+    font-size: 20px; }
+    .sidebar-container .links-container i {
+      margin: 10px 10px;
+      min-width: 20px; }
+
+.WLTS-Software::before {
+  background-color: black; }
+
+.WLTS-Software::after {
+  content: "";
+  background-image: url("../../Images/backgroundimage-dark.jpeg");
+  background-repeat: repeat-x;
+  opacity: 0.75;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; }
