@@ -1,0 +1,18 @@
+@import "./variables.scss";
+
+.links-container {
+
+    a {
+        text-decoration: none;
+        font-family: "MyFont";
+        color: $color-secondary-1-2;
+    }
+    
+    .fas:hover {
+        cursor: pointer;
+    }
+
+    .link-title:hover {
+        cursor: pointer;
+    }
+}

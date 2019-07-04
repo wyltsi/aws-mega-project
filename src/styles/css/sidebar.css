@@ -1,0 +1,10 @@
+.links-container a {
+  text-decoration: none;
+  font-family: "MyFont";
+  color: #E4D131; }
+
+.links-container .fas:hover {
+  cursor: pointer; }
+
+.links-container .link-title:hover {
+  cursor: pointer; }

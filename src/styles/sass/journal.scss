@@ -1,0 +1,47 @@
+@import "./variables.scss";
+
+.journal-container {
+
+    h2 {
+        font-family: "MyFont";
+        font-size: 20px;
+        color: $color-secondary-1-0;
+    }
+
+    .login-container {
+        button {
+            margin: 10px 0;
+        }
+    }
+
+    .sidebar-and-articles {
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+        padding: 20px;
+    }
+
+
+    .journal-sidebar-container {
+        margin-right: 20px;
+        padding: 20px;
+    }
+
+    .article-container {
+        padding: 10px;
+        border-left: 1px solid lightgray;
+
+        .journal-article {
+            padding: 0 10px;
+        }
+
+        h3 {
+            margin-bottom: 0px;
+        }
+
+        .article-date {
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+    }
+}

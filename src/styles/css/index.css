@@ -59,7 +59,8 @@
           background: rgba(255, 255, 255, 0.9);
           color: black;
           display: flex;
-          flex-direction: column; }
+          flex-direction: column;
+          margin-bottom: 100px; }
           .WLTS-Software .main-content .route-content .home .add-container .to-do .header {
             margin: 15px 0; }
           .WLTS-Software .main-content .route-content .home .add-container .to-do .list-item {
@@ -69,16 +70,6 @@
             color: black;
             margin: 0 15px;
             font-size: 15px; }
-    .WLTS-Software .main-content .route-content::after {
-      content: "";
-      background-color: #1D2586;
-      opacity: 0.65;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      position: absolute;
-      z-index: -1; }
   .WLTS-Software h1, .WLTS-Software h2 {
     color: #10176E; }
 
@@ -86,33 +77,18 @@
   color: white; }
 
 .sidebar-container {
+  background-color: #1B293F;
   height: 100%;
   min-width: 200px;
-  margin: 10px;
-  padding: 10px;
-  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3); }
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
+  padding: 10px; }
   .sidebar-container .fas {
-    color: #10176E; }
+    color: #E4D131; }
   .sidebar-container .links-container {
     font-size: 20px; }
     .sidebar-container .links-container i {
       margin: 10px 10px;
       min-width: 20px; }
-
-.WLTS-Software::before {
-  background-color: black; }
-
-.WLTS-Software::after {
-  content: "";
-  background-image: url("../../Images/backgroundimage-dark.jpeg");
-  background-repeat: repeat-x;
-  opacity: 0.75;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1; }
 
 .fixed-footer-container {
   background-color: #1B293F;
@@ -126,10 +102,60 @@
   flex-direction: row;
   justify-content: center; }
 
+.links-container a {
+  text-decoration: none;
+  font-family: "MyFont";
+  color: #E4D131; }
+
+.links-container .fas:hover {
+  cursor: pointer; }
+
+.links-container .link-title:hover {
+  cursor: pointer; }
+
+.journal-container h2 {
+  font-family: "MyFont";
+  font-size: 20px;
+  color: #C1AF11; }
+
+.journal-container .login-container button {
+  margin: 10px 0; }
+
+.journal-container .sidebar-and-articles {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  padding: 20px; }
+
+.journal-container .journal-sidebar-container {
+  margin-right: 20px;
+  padding: 20px; }
+
+.journal-container .article-container {
+  padding: 10px;
+  border-left: 1px solid lightgray; }
+  .journal-container .article-container .journal-article {
+    padding: 0 10px; }
+  .journal-container .article-container h3 {
+    margin-bottom: 0px; }
+  .journal-container .article-container .article-date {
+    font-size: 12px;
+    margin-bottom: 20px; }
+
 html,
 body,
 #root {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  height: 100%; }
+  font-family: sans-serif; }
+
+body {
+  content: "";
+  background-image: url("../../Images/backgroundimage-dark.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-repeat: repeat-x;
+  padding-right: 0px !important; }
+
+#root {
+  background-color: rgba(29, 37, 134, 0.65); }

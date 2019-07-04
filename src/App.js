@@ -5,6 +5,7 @@ import About from "./Content/About";
 import "typeface-roboto";
 import Sidebar from "./Sidebar/Sidebar";
 import Footer from "./Content/Footer";
+import Journal from "./Content/Journal/Journal";
 
 export const AppContext = React.createContext();
 
@@ -18,7 +19,6 @@ class App extends Component {
     }
     
     toggleSidebar = () => {
-        console.log("Toggling:");
         this.setState({
             displaySidebar: !this.state.displaySidebar
         });
@@ -34,6 +34,7 @@ class App extends Component {
                             <div className="route-content">
                                 <Route exact path="/" component={Home} />
                                 <Route path="/about" component={About} />
+                                <Route path="/journal" component={Journal} />
                             </div>
                         </div>
                     </AppContext.Provider>
