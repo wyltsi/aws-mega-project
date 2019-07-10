@@ -2,6 +2,10 @@
 
 .journal-container {
 
+    .journal-header {
+        font-size: 50px;
+    }
+
     h2 {
         font-family: "MyFont";
         font-size: 20px;
@@ -9,6 +13,11 @@
     }
 
     .login-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+
         button {
             margin: 10px 0;
         }
@@ -32,7 +41,10 @@
         border-left: 1px solid lightgray;
 
         .journal-article {
-            padding: 0 10px;
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid lightgray;
+            border-radius: 10px;
         }
 
         h3 {
@@ -42,6 +54,67 @@
         .article-date {
             font-size: 12px;
             margin-bottom: 20px;
+        }
+    }
+
+    .logout-container {
+        color: white;
+        font-weight: 900;
+
+        button {
+            margin-left: 20px;
+        }
+    }
+
+
+    .new-entry-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 20px;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+
+        .entry-links {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .entry-link-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .name {
+                flex-grow: 1;
+                margin-right: 10px;
+            }
+
+            .url {
+                flex-grow: 2;
+                margin-left: 10px;
+            }
+        }
+
+        #add-entry-link {
+            max-width: 100px;
+            margin: 10px;
+        }
+
+        #remove-link {
+            height: 55px;
+            margin: 16px 0 0 16px;
+        }
+
+        .text-editor-actions {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+
+            button {
+                margin: 10px;
+            }
         }
     }
 }

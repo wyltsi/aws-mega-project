@@ -2,6 +2,7 @@
 @import "./footer.scss";
 @import "./sidebar.scss";
 @import "./journal.scss";
+@import "./usermodals.scss";
 
 html,
 body,
@@ -24,4 +25,5 @@ body {
 
 #root {
     background-color: rgba( 29, 37,134,0.65);
+    height: 100vh;
 }

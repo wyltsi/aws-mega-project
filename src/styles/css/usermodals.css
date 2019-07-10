@@ -1,0 +1,14 @@
+.user-login-modal .login-error {
+  font-size: 12px;
+  color: red; }
+
+.user-login-modal .login-success {
+  font-size: 12px; }
+  .user-login-modal .login-success i {
+    font-size: 16px;
+    color: green;
+    margin: 10px; }
+
+.password-change-modal .password-change-error {
+  font-size: 12px;
+  color: red; }
