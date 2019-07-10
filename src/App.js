@@ -42,10 +42,8 @@ class App extends Component {
                             <div className="main-content">
                                 <div className="route-content">
                                     <Route exact path="/" component={Home} />
-                                    <Route path="/about" component={About} />
-                                    <Route path='/journal' component={JournalContainer}
-                                        />
-                                    
+                                    <Route exact path="/about" component={About} />
+                                    <Route exact path='/journal' component={JournalContainer} />
                                 </div>
                             </div>
                         </AppContext.Provider>

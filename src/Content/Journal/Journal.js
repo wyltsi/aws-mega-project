@@ -11,7 +11,7 @@ class Journal extends Component {
 		this.state = {
 			authState: null,
 			authData: null,
-			displayNewEntryScreen: true
+			displayNewEntryScreen: false
 		};
 
 		Hub.listen("auth", data => {
@@ -106,9 +106,8 @@ class Journal extends Component {
 					<div className="article-container">
 						{this.state.displayNewEntryScreen && (
 							<NewEntryScreen
-								addJournalEntry={
-									this.props.actions.addJournalEntry
-								}
+								addJournalEntry={this.props.actions.addJournalEntry}
+								toggleNewEntryScreen={this.toggleNewEntryScreen}
 							/>
 						)}
 						{this.props.journalData.map(article => {

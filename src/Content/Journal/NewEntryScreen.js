@@ -136,7 +136,7 @@ class NewEntryScreen extends Component {
                     </Button>
                 </div>
                 <div className="text-editor-actions">
-                    <Button variant="contained" color="secondary" id="cancel-entry" onClick={this.props.cancel}>
+                    <Button variant="contained" color="secondary" id="cancel-entry" onClick={this.props.toggleNewEntryScreen}>
                         Cancel
                     </Button>
                     <Button variant="contained" color="primary" id="submit-entry" onClick={this.submit}>
