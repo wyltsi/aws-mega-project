@@ -3,6 +3,7 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import isEmpty from "lodash/isEmpty";
 import uuidv1 from "uuid/v1";
+import { Animated } from "react-animated-css";
 
 class NewEntryScreen extends Component {
 
@@ -20,8 +21,8 @@ class NewEntryScreen extends Component {
         if (isEmpty(this.state.title) || isEmpty(this.state.text)) {
             console.log("Would be good to add some content...");
         } else {
-            console.log("Submitting the state:", {...this.state, date: new Date(), articleId: uuidv1()});
-            this.props.addJournalEntry({...this.state, date: new Date(), articleId: uuidv1()});
+            this.props.addJournalEntry({...this.state, date: new Date().toString(), articleId: uuidv1()});
+            this.props.toggleNewEntryScreen();
         }
         
     }
@@ -106,29 +107,31 @@ class NewEntryScreen extends Component {
                     }
                     {this.state.links.map((link, index) => {
                         return (
-                            <div className="entry-link-container" key={`link_${index}`}>
-                                <TextField
-                                    label="Name"
-                                    placeholder="Name"
-                                    className="single-line-input name"
-                                    margin="normal"
-                                    variant="filled"
-                                    value={this.state.links[index].name}
-                                    onChange={(e) => this.nameChange(e, index)}
-                                />
-                                <TextField
-                                    label="URL"
-                                    placeholder="URL"
-                                    className="single-line-input url"
-                                    margin="normal"
-                                    variant="filled"
-                                    value={this.state.links[index].url}
-                                    onChange={(e) => this.urlChange(e, index)}
-                                />
-                                <Button variant="contained" color="secondary" id="remove-link" onClick={() => this.removeLink(index)}>
-                                    <i className="fas fa-trash" />
-                                </Button>
-                            </div>
+                            <Animated animationIn="zoomIn" animationOut="zoomOut" isVisible={true} key={`link_${index}`}>
+                                <div className="entry-link-container">
+                                    <TextField
+                                        label="Name"
+                                        placeholder="Name"
+                                        className="single-line-input name"
+                                        margin="normal"
+                                        variant="filled"
+                                        value={this.state.links[index].name}
+                                        onChange={(e) => this.nameChange(e, index)}
+                                    />
+                                    <TextField
+                                        label="URL"
+                                        placeholder="URL"
+                                        className="single-line-input url"
+                                        margin="normal"
+                                        variant="filled"
+                                        value={this.state.links[index].url}
+                                        onChange={(e) => this.urlChange(e, index)}
+                                    />
+                                    <Button variant="contained" color="secondary" id="remove-link" onClick={() => this.removeLink(index)}>
+                                        <i className="fas fa-trash" />
+                                    </Button>
+                                </div>
+                            </Animated>
                         )
                     })}
                     <Button variant="contained" color="secondary" id="add-entry-link" onClick={this.AddNewLink}>

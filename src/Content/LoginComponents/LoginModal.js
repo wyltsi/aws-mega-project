@@ -5,6 +5,7 @@ import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import TextField from "@material-ui/core/TextField";
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 class LoginModal extends Component {
 	constructor(props) {
@@ -12,7 +13,8 @@ class LoginModal extends Component {
 
 		this.state = {
 			username: "",
-			password: ""
+			password: "",
+			SHOWTEMP: false
 		};
 	}
 
@@ -72,25 +74,32 @@ class LoginModal extends Component {
 						onChange={this.onChangePassword}
 						error={this.props.loginError ? true : false}
 					/>
-					{this.props.loginError && (
-						<p className="login-error">
-							<span>{this.props.loginError.message}</span>
-						</p>
-					)}
-					{this.props.loggedInSuccessfully && (
-						<p className="login-success">
-							<i className="fas fa-thumbs-up" />
-							Logged in successfully!
-						</p>
-					)}
+					<div className="login-information-container">
+						{this.props.loginError && (
+							<p className="login-error">
+								<span>{this.props.loginError.message}</span>
+							</p>
+						)}
+						{this.props.loggedInSuccessfully && (
+							<div className="login-success animated slideInRight">
+								<i className="fas fa-thumbs-up" />
+								Logged in successfully!
+							</div>
+						)}
+					</div>
 				</DialogContent>
 				<DialogActions>
-					<Button onClick={this.handleToggle} color="primary">
+					<Button id="login-cancel" onClick={this.handleToggle} color="primary">
 						Cancel
 					</Button>
-					<Button onClick={this.handleLogin} color="secondary">
-						Login
-					</Button>
+					{!this.props.loggingIn &&
+						<Button id="login-button" onClick={this.handleLogin} color="secondary">
+							Login
+						</Button>
+					}
+					{this.props.loggingIn &&
+						<CircularProgress className="logging-in-indicator" color="secondary" />
+					}
 				</DialogActions>
 			</Dialog>
 		);

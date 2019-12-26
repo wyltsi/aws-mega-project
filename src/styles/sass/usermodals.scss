@@ -11,10 +11,22 @@
 
         i {
             font-size: 16px;
-            color: green;
+            color: #28d428;
             margin: 10px;
         }
     }
+
+    .login-information-container {
+        position: fixed;
+        margin-top: 30px;
+    }
+
+    .logging-in-indicator {
+        width: 20px !important;
+        height: 20px !important;
+        margin-right: 20px;
+    }
+    
 }
 
 .password-change-modal {

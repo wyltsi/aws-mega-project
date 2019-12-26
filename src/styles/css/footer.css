@@ -5,7 +5,7 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  min-height: 100px;
+  min-height: 70px;
   display: flex;
   flex-direction: row;
   justify-content: center; }

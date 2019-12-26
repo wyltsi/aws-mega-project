@@ -42,10 +42,26 @@
         border-left: 1px solid lightgray;
 
         .journal-article {
-            margin-top: 20px;
             padding: 20px;
             border: 1px solid lightgray;
             border-radius: 10px;
+            margin-bottom: 20px;
+
+            .article-header-row {
+                display: flex;
+                justify-content: space-between;
+
+                button {
+                    width: 35px;
+                    height: 35px;
+                    margin-left: 10px;
+                }
+            }
+
+            .article-actions {
+                display: flex;
+                flex-direction: row;
+            }
         }
 
         h3 {
@@ -75,6 +91,7 @@
         padding: 20px;
         border: 1px solid lightgray;
         border-radius: 10px;
+        margin-bottom: 20px;
 
         .entry-links {
             display: flex;

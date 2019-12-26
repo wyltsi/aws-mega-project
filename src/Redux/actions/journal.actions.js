@@ -21,5 +21,16 @@ export const journalActions = {
     addJournalEntryError: (journalError) => ({
         type: "ADD_JOURNAL_ENTRY_ERROR",
         journalError
+    }),
+    deleteJournalEntry: (articleId) => ({
+        type: "DELETE_JOURNAL_ENTRY",
+        articleId
+    }),
+    deleteJournalEntrySuccess: () => ({
+        type: "DELETE_JOURNAL_ENTRY_SUCCESS"
+    }),
+    deleteJournalEntryError: (deletingEntryError) => ({
+        type: "DELETE_JOURNAL_ENTRY_SUCCESS",
+        deletingEntryError
     })
 }

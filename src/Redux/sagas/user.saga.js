@@ -1,25 +1,17 @@
 import { userActions } from "../actions/user.actions";
 import { put, takeLatest, all, delay } from "redux-saga/effects";
-import Amplify, { Auth } from 'aws-amplify';
-import awsconfig from '../../aws-exports';
-Amplify.configure({
-    ...awsconfig,
-    Analytics: { 
-        disabled: true
-    }
- });
+import { Auth } from 'aws-amplify';
 
 export function* userLogin({username, password}) {
     try {
 
         const user = yield Auth.signIn(username, password); 
-
         yield put(userActions.userLoginSuccess(user));
         if (user.challengeName === "NEW_PASSWORD_REQUIRED") {
             yield put(userActions.clearSuccess());
             yield put(userActions.toggleChangePasswordModal());
         } else {
-            yield delay(3000)
+            yield delay(2000)
             yield put(userActions.clearSuccess());
             yield put(userActions.toggleLoginModal()); 
         }

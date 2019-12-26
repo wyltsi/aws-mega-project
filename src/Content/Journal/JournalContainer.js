@@ -14,7 +14,8 @@ const mapDispatchToProps = (dispatch) => ({
         getJournalData: () => dispatch(journalActions.getJournalData()),
         toggleLoginModal: () => dispatch(userActions.toggleLoginModal()),
         logout: () => dispatch(userActions.logout()),
-        addJournalEntry: (entry) => dispatch(journalActions.addJournalEntry(entry))
+        addJournalEntry: (entry) => dispatch(journalActions.addJournalEntry(entry)),
+        deleteJournalEntry: (articleId) => dispatch(journalActions.deleteJournalEntry(articleId))
     }
 })
 

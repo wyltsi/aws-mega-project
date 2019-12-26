@@ -4,6 +4,7 @@ import JournalSidebar from "./JournalSidebar";
 import Article from "./Article";
 import { Hub } from "aws-amplify";
 import NewEntryScreen from "./NewEntryScreen";
+import { Animated } from "react-animated-css";
 
 class Journal extends Component {
 	constructor(props) {
@@ -39,7 +40,7 @@ class Journal extends Component {
 		this.props.actions.getJournalData();
 	}
 
-	componentWillReceiveProps() {}
+	componentWillReceiveProps() { }
 
 	handleToggle = e => {
 		e.preventDefault();
@@ -52,6 +53,10 @@ class Journal extends Component {
 		e.preventDefault();
 		e.stopPropagation();
 
+		this.setState({
+			authData: null,
+			authState: null
+		})
 		this.props.actions.logout();
 	};
 
@@ -79,15 +84,15 @@ class Journal extends Component {
 							</Button>
 						</div>
 					) : (
-						<Button
-							variant="contained"
-							color="secondary"
-							id="login-for-journal"
-							onClick={this.handleToggle}
-						>
-							Login
+							<Button
+								variant="contained"
+								color="secondary"
+								id="login-for-journal"
+								onClick={this.handleToggle}
+							>
+								Login
 						</Button>
-					)}
+						)}
 					{this.state.authData && (
 						<div className="add-entry-container">
 							<Button
@@ -104,17 +109,21 @@ class Journal extends Component {
 				<div className="sidebar-and-articles">
 					<JournalSidebar />
 					<div className="article-container">
-						{this.state.displayNewEntryScreen && (
-							<NewEntryScreen
-								addJournalEntry={this.props.actions.addJournalEntry}
-								toggleNewEntryScreen={this.toggleNewEntryScreen}
-							/>
-						)}
-						{this.props.journalData.map(article => {
+						{this.state.displayNewEntryScreen && 
+							<Animated animationIn="zoomIn" animationOut="zoomOut" isVisible={!!this.state.displayNewEntryScreen}>
+								<NewEntryScreen
+									addJournalEntry={this.props.actions.addJournalEntry}
+									toggleNewEntryScreen={this.toggleNewEntryScreen}
+								/>
+							</Animated>
+						}
+						{Array.isArray(this.props.journalData) && this.props.journalData.map(article => {
 							return (
 								<Article
 									article={article}
 									key={article.articleId}
+									authData={this.state.authData}
+									deleteJournalEntry={this.props.actions.deleteJournalEntry}
 								/>
 							);
 						})}

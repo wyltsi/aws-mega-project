@@ -24,10 +24,20 @@
     padding: 10px;
     border-left: 1px solid lightgray; }
     .journal-container .article-container .journal-article {
-      margin-top: 20px;
       padding: 20px;
       border: 1px solid lightgray;
-      border-radius: 10px; }
+      border-radius: 10px;
+      margin-bottom: 20px; }
+      .journal-container .article-container .journal-article .article-header-row {
+        display: flex;
+        justify-content: space-between; }
+        .journal-container .article-container .journal-article .article-header-row button {
+          width: 35px;
+          height: 35px;
+          margin-left: 10px; }
+      .journal-container .article-container .journal-article .article-actions {
+        display: flex;
+        flex-direction: row; }
     .journal-container .article-container h3 {
       margin-bottom: 0px; }
     .journal-container .article-container .article-date {
@@ -44,7 +54,8 @@
     justify-content: flex-start;
     padding: 20px;
     border: 1px solid lightgray;
-    border-radius: 10px; }
+    border-radius: 10px;
+    margin-bottom: 20px; }
     .journal-container .new-entry-container .entry-links {
       display: flex;
       flex-direction: column;

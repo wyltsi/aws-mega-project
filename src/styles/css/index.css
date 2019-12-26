@@ -97,7 +97,7 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  min-height: 100px;
+  min-height: 70px;
   display: flex;
   flex-direction: row;
   justify-content: center; }
@@ -139,10 +139,20 @@
     padding: 10px;
     border-left: 1px solid lightgray; }
     .journal-container .article-container .journal-article {
-      margin-top: 20px;
       padding: 20px;
       border: 1px solid lightgray;
-      border-radius: 10px; }
+      border-radius: 10px;
+      margin-bottom: 20px; }
+      .journal-container .article-container .journal-article .article-header-row {
+        display: flex;
+        justify-content: space-between; }
+        .journal-container .article-container .journal-article .article-header-row button {
+          width: 35px;
+          height: 35px;
+          margin-left: 10px; }
+      .journal-container .article-container .journal-article .article-actions {
+        display: flex;
+        flex-direction: row; }
     .journal-container .article-container h3 {
       margin-bottom: 0px; }
     .journal-container .article-container .article-date {
@@ -159,7 +169,8 @@
     justify-content: flex-start;
     padding: 20px;
     border: 1px solid lightgray;
-    border-radius: 10px; }
+    border-radius: 10px;
+    margin-bottom: 20px; }
     .journal-container .new-entry-container .entry-links {
       display: flex;
       flex-direction: column;
@@ -195,8 +206,17 @@
   font-size: 12px; }
   .user-login-modal .login-success i {
     font-size: 16px;
-    color: green;
+    color: #28d428;
     margin: 10px; }
+
+.user-login-modal .login-information-container {
+  position: fixed;
+  margin-top: 30px; }
+
+.user-login-modal .logging-in-indicator {
+  width: 20px !important;
+  height: 20px !important;
+  margin-right: 20px; }
 
 .password-change-modal .password-change-error {
   font-size: 12px;

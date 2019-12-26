@@ -6,8 +6,17 @@
   font-size: 12px; }
   .user-login-modal .login-success i {
     font-size: 16px;
-    color: green;
+    color: #28d428;
     margin: 10px; }
+
+.user-login-modal .login-information-container {
+  position: fixed;
+  margin-top: 30px; }
+
+.user-login-modal .logging-in-indicator {
+  width: 20px !important;
+  height: 20px !important;
+  margin-right: 20px; }
 
 .password-change-modal .password-change-error {
   font-size: 12px;
