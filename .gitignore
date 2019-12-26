@@ -25,5 +25,5 @@ yarn-error.log*
 build/
 dist/
 node_modules/
-aws-exports.js
+#aws-exports.js
 awsconfiguration.json
